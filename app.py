@@ -1,6 +1,11 @@
 from flask import Flask, render_template, request
 from utils.parser import extract_text
 from utils.scorer import analyze_resume
+import os
+
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 
 app = Flask(__name__)
 

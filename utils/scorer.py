@@ -1,6 +1,7 @@
 from sentence_transformers import SentenceTransformer, util
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+#model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
 
 def analyze_resume(resume_text, job_desc):
     resume_emb = model.encode(resume_text, convert_to_tensor=True)
